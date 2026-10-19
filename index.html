@@ -313,9 +313,27 @@
     .process-step:not(:last-child)::after { content: "→"; position: absolute; top: 15px; right: -13px; color: var(--orange); }
     .process-icon { width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 12px; background: #fff7ef; color: var(--orange); font: 19px var(--display); }
     .process-step strong { font-size: 10px; }
-    .projects { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 12px; }
-    .project-visual { aspect-ratio: 1.18; border: 1px solid var(--line); }
+    .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 14px; }
+    .project-visual { aspect-ratio: 1.55; border: 1px solid var(--line); }
     .project-visual .project-number { top: 8px; left: 8px; padding: 6px 7px; font-size: 8px; }
+    .project-art { position: relative; overflow: hidden; width: 100%; height: 100%; display: grid; place-items: center; padding: 20px; text-align: center; }
+    .project-art::before, .project-art::after { position: absolute; content: ""; border-radius: 50%; }
+    .project-art-logo { background: #efe5d7; }
+    .project-art-logo::before { width: 150px; aspect-ratio: 1; border: 1px solid #b98161; }
+    .project-art-logo::after { width: 116px; aspect-ratio: 1; border: 1px solid #b98161; }
+    .project-art-menu { background: #e9ddc8; }
+    .project-art-menu::before { width: 170px; height: 145px; border-radius: 2px; background: #fffaf1; box-shadow: 5px 6px 0 #c6b89f; }
+    .project-art-social { background: #cbd7e2; }
+    .project-art-social::before { width: 165px; aspect-ratio: 1; right: -30px; top: -58px; background: #9bb0c5; }
+    .project-art-social::after { width: 80px; aspect-ratio: 1; left: -17px; bottom: -30px; background: #d98a67; }
+    .project-art-poster { background: #f0d7c8; }
+    .project-art-poster::before { width: 150px; height: 150px; right: -50px; top: -56px; background: #d88968; }
+    .project-art-poster::after { width: 90px; height: 90px; left: -35px; bottom: -45px; background: #9eafc0; }
+    .project-art-copy { position: relative; z-index: 1; display: grid; justify-items: center; gap: 5px; }
+    .project-art-copy strong { font: 700 24px/1 var(--display); }
+    .project-art-copy span { font: 9px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+    .project-art-copy small { font: 10px var(--sans); }
+    .practice-label { position: absolute; z-index: 2; top: 9px; right: 9px; padding: 5px 7px; background: #fffaf4; color: var(--muted); font: 8px var(--mono); text-transform: uppercase; }
     .project-meta { padding-top: 9px; }
     .project-meta h3 { font: 700 17px var(--display); }
     .project-meta p { font-size: 10px; }
@@ -475,14 +493,12 @@
       </section>
 
       <section class="section" id="work">
-        <div class="section-head"><div><div class="eyebrow">04 / A few visual explorations</div><h2>Selected work</h2></div><p>Replace these inspiration images with your own finished designs.</p></div>
+        <div class="section-head"><div><div class="eyebrow">04 / Learning by making</div><h2>Practice projects</h2></div><p>Small beginner design exercises. Replace these concepts with your own work as you create it.</p></div>
         <div class="projects">
-          <article class="project"><div class="project-visual"><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=85" alt="Graphic design printed pieces arranged on a table" loading="lazy"><span class="project-number">01</span></div><div class="project-meta"><div><h3>Atelier Identity</h3><p>Logo & brand direction</p></div></div></article>
-          <article class="project"><div class="project-visual"><img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=85" alt="Minimal skincare products arranged with soft botanical details" loading="lazy"><span class="project-number">02</span></div><div class="project-meta"><div><h3>Botanical Care</h3><p>Packaging concept</p></div></div></article>
-          <article class="project"><div class="project-visual"><img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=900&q=85" alt="Colorful social media artwork on a phone screen" loading="lazy"><span class="project-number">03</span></div><div class="project-meta"><div><h3>Social Stories</h3><p>Campaign graphics</p></div></div></article>
-          <article class="project"><div class="project-visual"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=85" alt="Warm restaurant branding and menu presentation" loading="lazy"><span class="project-number">04</span></div><div class="project-meta"><div><h3>Sunday Table</h3><p>Menu & print design</p></div></div></article>
-          <article class="project"><div class="project-visual"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85" alt="Bright red sneaker product photographed against a red background" loading="lazy"><span class="project-number">05</span></div><div class="project-meta"><div><h3>Studio Motion</h3><p>Product campaign</p></div></div></article>
-          <article class="project"><div class="project-visual"><img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=900&q=85" alt="Reusable drink bottle product with a clean graphic look" loading="lazy"><span class="project-number">06</span></div><div class="project-meta"><div><h3>Daily Ritual</h3><p>Product & packaging</p></div></div></article>
+          <article class="project"><div class="project-visual" role="img" aria-label="Simple practice logo for a small cafe"><span class="project-number">01</span><span class="practice-label">Practice</span><div class="project-art project-art-logo"><div class="project-art-copy"><strong>Bloom</strong><span>little cafe</span></div></div></div><div class="project-meta"><div><h3>First logo idea</h3><p>Practice using a name, one typeface, and two colors.</p></div></div></article>
+          <article class="project"><div class="project-visual" role="img" aria-label="Basic cafe menu layout concept"><span class="project-number">02</span><span class="practice-label">Practice</span><div class="project-art project-art-menu"><div class="project-art-copy"><strong>Little Cafe</strong><span>Simple menu</span><small>Tea · Coffee · Cake</small></div></div></div><div class="project-meta"><div><h3>Simple cafe menu</h3><p>Arrange a few menu items with clear headings and spacing.</p></div></div></article>
+          <article class="project"><div class="project-visual" role="img" aria-label="Simple social media post concept"><span class="project-number">03</span><span class="practice-label">Practice</span><div class="project-art project-art-social"><div class="project-art-copy"><span>A little reminder</span><strong>Take a break.</strong><small>You deserve it.</small></div></div></div><div class="project-meta"><div><h3>Social post practice</h3><p>Try a short message with one simple shape and bold text.</p></div></div></article>
+          <article class="project"><div class="project-visual" role="img" aria-label="Beginner community event poster concept"><span class="project-number">04</span><span class="practice-label">Practice</span><div class="project-art project-art-poster"><div class="project-art-copy"><span>Community event</span><strong>Creative Day</strong><small>Make something today · 18 May</small></div></div></div><div class="project-meta"><div><h3>Event poster layout</h3><p>Practice arranging an event title, date, and short detail.</p></div></div></article>
         </div>
       </section>
 
